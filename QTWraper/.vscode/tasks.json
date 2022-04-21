@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "nim",
+            "args": [
+                "compile",
+                "-g",
+                "--debugger:native",
+                "-o:${workspaceRoot}/bin/main",
+                "main.nimble"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "type": "shell"
+        },
+        {
+            "label": "nimble",
+            "command": "nimble",
+            "args": [
+                "build",
+                "-g",
+                "--debugger:native",
+                "-o:${workspaceRoot}/bin/main",
+                "main.nimble"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "type": "shell"
+        }
+    ]
+}
